@@ -47,6 +47,7 @@ if errorlevel 1 goto VS_NOT_FOUND
 REM automatically compile solution:
 :COMPILE
 MSBuild "BUSMASTER.sln" /property:Configuration=Release /p:Platform=Win32
+goto END
 
 :VS_NOT_FOUND
 echo Supported Visual Studio generator not found. Build failed!

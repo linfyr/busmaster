@@ -31,6 +31,6 @@ http://www.antlr3.org/download.html
 
 8. Build BUSMASTER executable on Windows
 	8.1 Open "x86 Native Tools Command Prompt for VS" (or Developer Command Prompt).
-	8.2 Run "Sources\BUSMASTER\build.bat".
+	8.2 From repository root, run "Sources\BUSMASTER\build.bat".
 	8.3 The generated executable will be available at "Sources\BUSMASTER\BIN\Release\BUSMASTER.exe".
 	8.4 To build the installer package after binaries are ready, run "Installation Setup\build.bat".
