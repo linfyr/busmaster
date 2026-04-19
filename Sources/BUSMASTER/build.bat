@@ -42,7 +42,7 @@ cmake -G "Visual Studio 16 2019" -A Win32 .. >> "%CMAKE_LOG%" 2>&1
 if %ERRORLEVEL% EQU 0 goto COMPILE
 
 echo Trying Visual Studio 12 2013 generator >> "%CMAKE_LOG%"
-cmake -G "Visual Studio 12 2013" -A Win32 .. >> "%CMAKE_LOG%" 2>&1
+cmake -G "Visual Studio 12 2013" .. >> "%CMAKE_LOG%" 2>&1
 if %ERRORLEVEL% EQU 0 goto COMPILE
 
 echo Trying Visual Studio 11 2012 generator >> "%CMAKE_LOG%"
@@ -51,7 +51,7 @@ if %ERRORLEVEL% NEQ 0 goto VS_NOT_FOUND
 
 REM automatically compile solution:
 :COMPILE
-MSBuild "BUSMASTER.sln" /property:Configuration=Release /p:Platform=Win32
+MSBuild "BUSMASTER.sln" /p:Configuration=Release /p:Platform=Win32
 goto END
 
 :VS_NOT_FOUND
