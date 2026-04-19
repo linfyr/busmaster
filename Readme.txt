@@ -28,4 +28,10 @@ http://download.qt-project.org/archive/qt/5.3/5.3.0/qt-opensource-windows-x86-ms
 	7.5. Free Type Library license details can be found at http://www.freetype.org/
     	7.6. Antlr3.5.2: The Complete source code can be downloaded from 
 http://www.antlr3.org/download.html
+
+8. Build BUSMASTER executable on Windows
+	8.1 Open "x86 Native Tools Command Prompt for VS" (or Developer Command Prompt).
+	8.2 Run "Sources\BUSMASTER\build.bat".
+	8.3 The generated executable will be available at "Sources\BUSMASTER\BIN\Release\BUSMASTER.exe".
+	8.4 To build the installer package after binaries are ready, run "Installation Setup\build.bat".
 	

@@ -32,12 +32,25 @@ mkdir build
 cd build
 
 REM define your compiler/IDE here:
-REM cmake -G "Visual Studio 10 2010" ..
+cmake -G "Visual Studio 17 2022" -A Win32 .. >nul 2>&1
+if not errorlevel 1 goto COMPILE
+
+cmake -G "Visual Studio 16 2019" -A Win32 .. >nul 2>&1
+if not errorlevel 1 goto COMPILE
+
+cmake -G "Visual Studio 12 2013" .. >nul 2>&1
+if not errorlevel 1 goto COMPILE
+
 cmake -G "Visual Studio 11 2012" -T "v110_xp" ..
-REM cmake -G "Visual Studio 12 2013" ..
+if errorlevel 1 goto VS_NOT_FOUND
 
 REM automatically compile solution:
-MSBuild "BUSMASTER.sln" /property:Configuration=Release
+:COMPILE
+MSBuild "BUSMASTER.sln" /property:Configuration=Release /p:Platform=Win32
+
+:VS_NOT_FOUND
+echo Supported Visual Studio generator not found. Build failed!
+goto END
 
 :END
 REM pause
