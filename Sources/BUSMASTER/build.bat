@@ -42,7 +42,7 @@ cmake -G "Visual Studio 12 2013" .. >nul 2>&1
 if %ERRORLEVEL% EQU 0 goto COMPILE
 
 cmake -G "Visual Studio 11 2012" -T "v110_xp" ..
-if errorlevel 1 goto VS_NOT_FOUND
+if %ERRORLEVEL% NEQ 0 goto VS_NOT_FOUND
 
 REM automatically compile solution:
 :COMPILE
