@@ -33,13 +33,13 @@ cd build
 
 REM define your compiler/IDE here:
 cmake -G "Visual Studio 17 2022" -A Win32 .. >nul 2>&1
-if not errorlevel 1 goto COMPILE
+if %ERRORLEVEL% EQU 0 goto COMPILE
 
 cmake -G "Visual Studio 16 2019" -A Win32 .. >nul 2>&1
-if not errorlevel 1 goto COMPILE
+if %ERRORLEVEL% EQU 0 goto COMPILE
 
 cmake -G "Visual Studio 12 2013" .. >nul 2>&1
-if not errorlevel 1 goto COMPILE
+if %ERRORLEVEL% EQU 0 goto COMPILE
 
 cmake -G "Visual Studio 11 2012" -T "v110_xp" ..
 if errorlevel 1 goto VS_NOT_FOUND
