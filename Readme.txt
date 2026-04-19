@@ -30,7 +30,7 @@ http://download.qt-project.org/archive/qt/5.3/5.3.0/qt-opensource-windows-x86-ms
 http://www.antlr3.org/download.html
 
 8. Build BUSMASTER executable on Windows
-	8.1 Open "x86 Native Tools Command Prompt for VS" (or Developer Command Prompt).
+	8.1 Open a Native Tools/Developer Command Prompt for any supported Visual Studio version (for example VS 2022 or VS 2019).
 	8.2 From repository root, run "Sources\BUSMASTER\build.bat".
 	8.3 The generated executable will be available at "Sources\BUSMASTER\BIN\Release\BUSMASTER.exe".
 	8.4 To build the installer package after binaries are ready, run "Installation Setup\build.bat".

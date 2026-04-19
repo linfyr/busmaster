@@ -51,7 +51,7 @@ if %ERRORLEVEL% NEQ 0 goto VS_NOT_FOUND
 
 REM automatically compile solution:
 :COMPILE
-MSBuild "BUSMASTER.sln" /p:Configuration=Release /p:Platform=Win32
+MSBuild "BUSMASTER.sln" /p:Configuration=Release
 goto END
 
 :VS_NOT_FOUND
